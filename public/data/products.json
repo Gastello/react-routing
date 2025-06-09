@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "title": "Безпровідні навушники",
+    "description": "Зручні Bluetooth-навушники з шумопоглинанням.",
+    "price": 1299,
+    "image": "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb",
+    "category": "Електроніка"
+  },
+  {
+    "id": "2",
+    "title": "Спортивні кросівки",
+    "description": "Легкі і зручні кросівки для бігу.",
+    "price": 2499,
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
+    "category": "Одяг"
+  },
+  {
+    "id": "3",
+    "title": "Рюкзак міський",
+    "description": "Стильний рюкзак з великою кількістю кишень.",
+    "price": 899,
+    "image": "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3",
+    "category": "Аксесуари"
+  },
+  {
+    "id": "4",
+    "title": "Смарт-годинник",
+    "description": "Фітнес-трекер з вимірюванням пульсу та крокоміром.",
+    "price": 1999,
+    "image": "https://images.unsplash.com/photo-1660844817855-3ecc7ef21f12",
+    "category": "Електроніка"
+  },
+  {
+    "id": "5",
+    "title": "Футболка чорна",
+    "description": "Класична бавовняна футболка.",
+    "price": 399,
+    "image": "https://images.unsplash.com/photo-1633966887768-64f9a867bdba",
+    "category": "Одяг"
+  },
+  {
+    "id": "6",
+    "title": "Сонцезахисні окуляри",
+    "description": "Окуляри з UV-захистом та поляризацією.",
+    "price": 599,
+    "image": "https://images.unsplash.com/photo-1508296695146-257a814070b4",
+    "category": "Аксесуари"
+  }
+]
