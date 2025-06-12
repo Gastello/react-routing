@@ -1,5 +1,6 @@
 import { COMMON_ROUTES } from "./routes.names";
 import { CommonPages } from "../pages";
+import type { Product } from "../pages/common/Products";
 
 export default [
   {
@@ -23,5 +24,14 @@ export default [
     path: COMMON_ROUTES.PRODUCTS,
     element: <CommonPages.Products />,
     loader: async () => fetch("/data/products.json").then((res) => res.json()),
+  },
+  {
+    path: `${COMMON_ROUTES.PRODUCTS}/:id`,
+    element: <CommonPages.ProductsDetails />,
+    loader: async ({ params }: { params: { id: string } }) => {
+      const res = await fetch("/data/products.json");
+      const products = await res.json();
+      return products.find((p:Product) => p.id === params.id);
+    },
   },
 ];
