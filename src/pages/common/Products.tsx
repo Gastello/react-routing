@@ -28,7 +28,7 @@ export default function Products() {
               <Link
                 to={`${COMMON_ROUTES.PRODUCTS}/${el.id}`}
                 key={idx}
-                className="justify-stretch italic"
+                className="justify-stretch italic text-xl"
               >
                 Дізнатись більше...
               </Link>

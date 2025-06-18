@@ -1,8 +1,13 @@
 import { COMMON_ROUTES } from "./routes.names";
 import { CommonPages } from "../pages";
 import type { Product } from "../pages/common/Products";
+import { NotFound } from "../pages/common";
 
 export default [
+  {
+    path: "*",
+    element: <NotFound />,
+  },
   {
     index: true,
     element: <CommonPages.Home />,
@@ -31,7 +36,7 @@ export default [
     loader: async ({ params }: { params: { id: string } }) => {
       const res = await fetch("/data/products.json");
       const products = await res.json();
-      return products.find((p:Product) => p.id === params.id);
+      return products.find((p: Product) => p.id === params.id);
     },
   },
 ];

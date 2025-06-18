@@ -5,6 +5,7 @@ import PageTemplate from "./PageTemplate";
 import sellerRouter from "./seller.router";
 import userRouter from "./user.router";
 import { NotFound } from "../pages/common";
+import { createContext, useState } from "react";
 
 const getUserRole = (role: string) => {
   switch (role) {
@@ -18,9 +19,15 @@ const getUserRole = (role: string) => {
       return [];
   }
 };
-export default function MyAppRouter() {
-  const role = ROLES.USER;
+export type RoleContextType = {
+  role: string;
+  setRole: (arg: string) => void;
+};
+export const RoleContext = createContext<RoleContextType | undefined>(undefined);
 
+export default function MyAppRouter() {
+  const [role, setRole] = useState(ROLES.USER);
+  console.log("render!")
   const router = createBrowserRouter([
     {
       path: COMMON_ROUTES.HOME,
@@ -30,8 +37,8 @@ export default function MyAppRouter() {
     },
   ]);
   return (
-    <>
+    <RoleContext.Provider value={{ role, setRole }}>
       <RouterProvider router={router} />
-    </>
+    </RoleContext.Provider>
   );
 }
